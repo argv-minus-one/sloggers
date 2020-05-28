@@ -694,6 +694,7 @@ mod tests {
     }
 
     #[test]
+    #[cfg(feature = "libflate")]
     fn file_gzip_rotation_works() {
         let dir = tempdir();
         let logger = FileLoggerBuilder::new(dir.path().join("foo.log"))
