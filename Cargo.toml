@@ -15,10 +15,11 @@ travis-ci = {repository = "sile/sloggers"}
 codecov = {repository = "sile/sloggers"}
 
 [features]
-default = ["libflate", "slog-kvfilter"]
+default = ["libflate", "slog-kvfilter", "slog-syslog"]
 
 [dependencies]
 chrono="0.4"
+dyn-clone = "1"
 libflate = {version = "1", optional = true}
 serde = {version = "1", features = ["derive"]}
 slog = "2"
@@ -27,6 +28,7 @@ slog-term = "2"
 slog-scope = "4"
 slog-kvfilter = {version = "~0.7", optional = true}
 slog-stdlog = "4"
+slog-syslog = {version = "0.13", path = "../slog-syslog", optional = true}
 trackable = "1"
 regex="1"
 

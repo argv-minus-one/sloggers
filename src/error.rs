@@ -18,6 +18,12 @@ pub enum ErrorKind {
     /// Invalid input.
     Invalid,
 
+    /// There was an error looking up the address of a logging server.
+    ServerLookup,
+
+    /// There was an error connecting to a logging server.
+    ServerConnect,
+
     /// Unknown error.
     Other,
 }

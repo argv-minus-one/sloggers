@@ -57,6 +57,7 @@ pub mod file;
 pub mod null;
 pub mod terminal;
 pub mod types;
+pub mod syslog;
 
 mod build;
 mod config;
