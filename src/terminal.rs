@@ -115,7 +115,7 @@ impl Build for TerminalLoggerBuilder {
 /// ```
 /// use sloggers::terminal::Destination;
 ///
-/// assert_eq!(Destination::default(), Destination::Stdout);
+/// assert_eq!(Destination::default(), Destination::Stderr);
 /// ```
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(rename_all = "lowercase")]
@@ -128,7 +128,7 @@ pub enum Destination {
 }
 impl Default for Destination {
     fn default() -> Self {
-        Destination::Stdout
+        Destination::Stderr
     }
 }
 impl Destination {
